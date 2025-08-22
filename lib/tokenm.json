@@ -1,4 +1,4 @@
-{
+·{
   "token": "",
   "open_token": "",
   "open_api_url": "postparam|http://api.extscreen.com/aliyundrive/token",
@@ -62,7 +62,7 @@
   "pan189_username": "",
   "pan189_password": "",
   "pan189_flags": "4kz",
-  "pan_order": "quark|123|ali|yd|uc",
+  "pan_order": "quark|123|ali|yd",
   "tgsearch_url": "https://d.kstore.dev/download/7395/tgsearch.tar.xz",
   "tgsearch_api_id": "",
   "tgsearch_api_hash": "",
