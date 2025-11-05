@@ -5,7 +5,7 @@
       "name": "J直播",
       "type": 0,
       "playerType": 2,
-      "url": "https://d.kstore.dev/download/7395/zb.txt",
+      "url": "https://github.ajin.us.kg/https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/lib/zb.txt",
       "ua": "okhttp/3.15",
       "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
