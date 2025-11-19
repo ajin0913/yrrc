@@ -253,6 +253,20 @@
       }
     },
     {
+      "key": "厂长",
+      "name": "📔厂长┃在线",
+      "type": 3,
+      "api": "csp_CzzyGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 2,
+      "ext": {
+        "danmu": true
+      },
+      "timeout": 30,
+      "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
+    },
+    {
       "key": "电影天堂",
       "name": "🏠️天堂┃采集",
       "type": 1,
@@ -361,6 +375,20 @@
       "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
     },
     {
+      "key": "爱盘",
+      "name": "❤️爱盘┃网盘搜索",
+      "type": 3,
+      "api": "csp_AiPanGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 2,
+      "ext": {
+        "danmu": true
+      },
+      "timeout": 30,
+      "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
+    },
+    {
       "key": "csp_QuPanSouGuard",
       "name": "🤓趣盘┃网盘搜索",
       "type": 3,
@@ -435,11 +463,16 @@
   ],
   "proxy": [
     "raw.githubusercontent.com",
+    ".*cz4k.*",
+    ".*aipan.*",
+    ".*leijing2.*",
+    ".*leijing1.*",
+    ".*leijing.*",
+    ".*czzymovie.*",
     "tv.iill.top",
     ".*hmxz.*",
     ".*feimao666.*",
-    ".*2xiaopan.*",
-    "123panfx.com",
+    ".*pan1.*",
     "googlevideo.com",
     "cdn.v82u1l.com",
     "cdn.iz8qkg.com",
