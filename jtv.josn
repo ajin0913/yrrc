@@ -32,30 +32,6 @@
       "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
     },
     {
-      "key": "TGDouban",
-      "name": "🥬TG豆瓣┃搜索",
-      "type": 3,
-      "api": "csp_TGDouban",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "ext": {
-        "token": "https://github.ajin.us.kg/https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/lib/tokenm.json",
-        "json": "https://d.kstore.dev/download/7395/tgsearch.json",
-        "keywords": "名称,片名,推荐",
-        "tgsearch_url": "https://tg.252035.xyz",
-        "tgsearch_media_url": "https://tg.252035.xyz",
-        "channellist": "yp123pan,tianyi_pd2,tianyirigeng,tyypzhpd,cloudtianyi,kuakeclound,ydyp888,ydypzyfx,pan123pan,zyfb123,zyzhpd123,xx123pan,Aliyun_4K_Movies,sbsbsnsqq,tianyifc,txtyzy,peccxinpd,PanjClub,baicaoZY",
-        "proxy": "proxy",
-        "douban": "https://github.ajin.us.kg/https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/lib/douban.json",
-        "danmu": true
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 0.7
-      }
-    },
-    {
       "key": "PG",
       "name": "🏬PG┃配置中心",
       "type": 3,
