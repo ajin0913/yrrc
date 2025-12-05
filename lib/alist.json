@@ -9,16 +9,6 @@
         "username": "admin",
         "password": "159753"
       }
-    },
-    {
-      "name": "在线测试",
-      "search": true,
-      "searchable": true,
-      "server": "https://alist.ajin.us.kg",
-      "login": {
-        "username": "ajin",
-        "password": "159753"
-      }
     }
   ],
   "danmu": true
