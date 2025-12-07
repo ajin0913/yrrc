@@ -112,7 +112,11 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "timeout": 10
+      "style": {
+        "type": "list"
+      },
+      "timeout": 10,
+      "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
     },
     {
       "key": "瓜子看球",
