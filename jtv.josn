@@ -216,6 +216,17 @@
       "jar": "https://github.ajin.us.kg/https://github.com/ajin0913/yrrc/raw/refs/heads/main/ok321.png"
     },
     {
+      "key": "校长影视",
+      "name": "🏫校长┃网盘",
+      "type": 3,
+      "api": "csp_XiaoZhang",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "https://github.ajin.us.kg/https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/lib/tokenm.json$$$https://xzyshd.com$$$proxy$$$1"
+    },
+    {
       "key": "Youtube",
       "name": "⭕️Youtube┃官源",
       "type": 3,
