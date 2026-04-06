@@ -4,7 +4,7 @@
       "name": "本地",
       "search": true,
       "searchable": true,
-      "server": "http://192.168.10.57:5244",
+      "server": "http://192.168.10.85:5244",
       "login": {
         "username": "admin",
         "password": "159753"
