@@ -21,23 +21,31 @@ class Spider(Spider):
         except:
             self.extendDict = {}
         
-        # 优化：使用 Session 复用连接池提高握手速度
         self.session = requests.Session()
         
-        # 代理配置
+        # --- 增强型代理配置逻辑 ---
         self.proxy_str = None
         if 'proxy' in self.extendDict:
             proxy_val = self.extendDict['proxy']
             if proxy_val:
-                if isinstance(proxy_val, dict):
-                    self.session.proxies = proxy_val
-                    if 'http' in proxy_val:
-                        self.proxy_str = proxy_val['http'].replace('http://', '')
-                elif isinstance(proxy_val, str):
+                if isinstance(proxy_val, str):
                     self.proxy_str = proxy_val
-                    p_url = f'http://{proxy_val}'
+                    # 检查是否已经是协议开头，否则默认补全
+                    if not (proxy_val.startswith('http') or proxy_val.startswith('socks5')):
+                        # 如果包含 '@' 或者端口常见于 SOCKS，可以手动改这里，默认设为 socks5
+                        p_url = f'socks5://{proxy_val}'
+                    else:
+                        p_url = proxy_val
+                    
                     self.session.proxies = {'http': p_url, 'https': p_url}
+                elif isinstance(proxy_val, dict):
+                    self.session.proxies = proxy_val
         
+        # 即使没有外部输入，如果你想在代码里写死代理，取消下面两行的注释：
+        # debug_proxy = "socks5://127.0.0.1:1080"
+        # self.session.proxies = {'http': debug_proxy, 'https': debug_proxy}
+        # -----------------------
+
         self.header = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
@@ -45,7 +53,6 @@ class Spider(Spider):
         }
         self.session.headers.update(self.header)
         
-        # 加载配置
         self.config = {}
         if 'json' in self.extendDict:
             try:
@@ -162,11 +169,10 @@ class Spider(Spider):
 
     def detailContent(self, did):
         video_id = did[0]
-        # 频道文件夹逻辑
         if video_id.startswith('channel_'):
             channel_name = video_id[8:]
             all_videos = []
-            for p in range(1, 4): # 获取前3页
+            for p in range(1, 4):
                 v, m = self._handle_pagination(p, channel_name=channel_name, cache_prefix=f"ch_{channel_name}")
                 all_videos.extend(v)
                 if not m: break
@@ -178,19 +184,16 @@ class Spider(Spider):
             r = self.session.get(f"https://www.youtube.com/watch?v={video_id}", timeout=10)
             html_content = r.text
             
-            # 修正：精准匹配作者 handle
             author_match = re.search(r'"canonicalBaseUrl":"/([^"]+)"', html_content)
             author_id = author_match.group(1).replace('@', '') if author_match else ""
             
             title = self._get_video_title(video_id)
             related = self._extract_related_videos_fixed(html_content, video_id, 30)
             
-            # 获取当前 UP 主的视频
             channel_v = []
             if author_id:
                 channel_v, _ = self._handle_pagination(1, channel_name=author_id, cache_prefix="det_ch")
 
-            # 修正：严格对比原代码的集数构建方式
             play_url1 = f"{self._safe_title(title)}${video_id}"
             
             play_url2_parts = []
