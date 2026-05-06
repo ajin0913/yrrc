@@ -34,12 +34,12 @@
       },
       "jar": "http://oss4liview.moji.com/thd_file/2026/01/26/0e8629c873fea38d04bc58cbeb28c3c5.jpg;md5;127ea82cb8bf8a82f0cf64da66e39b60"
     },
-        {
+    {
       "key": "油管",
       "name": "油管",
       "type": 3,
       "changeable": 1,
-      "api": "./py/油管.py",
+      "api": "https://d.kstore.dev/download/7395/yg.py",
       "ext": {
         "socks5": "220.93.154.77:56632"
       }
