@@ -39,7 +39,7 @@
       "name": "油管",
       "type": 3,
       "changeable": 1,
-      "api": "https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/yg.py",
+      "api": "https://github.ajin.us.kg/https://raw.githubusercontent.com/ajin0913/yrrc/refs/heads/main/yg.py",
       "ext": {
         "proxy": "socks5://220.93.154.85:54787"
       }
